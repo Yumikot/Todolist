@@ -1,0 +1,21 @@
+<div class = "kaimonolist">
+<%= form_for @list do |f| %>
+　<% if @list.errors.any? %>
+  　<%= @list.errors.count %>個のエラーがあります
+  　<% @list.errors.full_messages.each do |msg| %>
+  　<li><%= msg %></li>
+　<% end %>
+　<% end %>
+
+<p>
+    <%= f.label :list %><br>
+    <%= f.text_field :title %>
+</p>
+<p>
+    <%= f.label :about %><br>
+    <%= f.text_area :text %>
+</p>
+    <%= f.submit :submit %>
+    </div>
+    
+<% end %>

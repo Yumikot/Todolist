@@ -1,0 +1,5 @@
+<%= form_for [@list, @list.items.build] do |f| %>
+お買い物リスト<br>
+<%= f.text_area :body %><br>
+<%= f.submit :submit %>
+<% end %>

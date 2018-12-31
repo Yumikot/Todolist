@@ -1,0 +1,11 @@
+<div class="showpage">
+<h1><%= @list.title %></h1>
+<p><%= @list.text %></p>
+
+
+<%= render @list.items %>
+<hr>
+
+<%= render 'items/form' %>
+<p><%= link_to "記事一覧に戻る", lists_path %></p>
+</div>

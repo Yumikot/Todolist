@@ -1,0 +1,13 @@
+<div class="ichiran">
+<h1>リスト一覧</h1>
+<%= link_to "新規リスト作成", new_list_path %>
+
+<% @lists.each do |list| %>
+
+<h2><%= link_to list.title, list_path(list) %></h2>
+<p><%= list.text %></p>
+<%= link_to "編集する", edit_list_path(list) %>
+<%= link_to "削除する", list_path(list), method: :delete, data: {confirm: "本当によろしいですか"}%>
+<% end %>
+<%= link_to "トップに戻る", welcome_index_path %>
+</div>
